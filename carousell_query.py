@@ -4,7 +4,7 @@ import json
 class CarousellQuery:
   def __init__(self, keyword):
     self.keyword = keyword
-    self.query_url = "https://sg.carousell.com/search/products/?query={}&sort_by=time_created%2Cdescending".format(keyword)
+    self.query_url = "https://hk.carousell.com/search/products/?query={}&sort_by=time_created%2Cdescending".format(keyword)
     self.response = requests.get(self.query_url)
     self.html_str = self.response.content.decode("utf-8")
     self.products = parse_products(self.html_str)
