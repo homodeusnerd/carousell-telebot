@@ -15,7 +15,7 @@ carousell_poller = None
 
 def telegram_listener(products):
   for product in products:
-    url = 'https://sg.carousell.com/p/' + product['id']
+    url = 'https://hk.carousell.com/p/' + product['id']
     message = """
 Title: {}
 
